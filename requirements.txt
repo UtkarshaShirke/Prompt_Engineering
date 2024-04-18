@@ -6,4 +6,4 @@ langchain
 scikit-learn
 langchain-pinecone
 langchain-openai
-
+pypdf
