@@ -30,7 +30,7 @@ import toml
 # Pinecone Setup
 api_key = st.secrets['PINECONE_API_KEY']
 environment = st.secrets['PINECONE_ENVIRONMENT']
-use_serverless = st.secrets["USE_SERVERLESS", "False"].lower() == "true"
+use_serverless = "False"
 
 # Configure Pinecone client
 pc = pinecone.Pinecone(api_key=api_key, environment=environment)
