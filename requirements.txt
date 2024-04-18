@@ -1,4 +1,7 @@
 openai
 streamlit
 pinecone
+langchain-community
 langchain
+scikit-learn
+
