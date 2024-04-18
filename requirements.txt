@@ -4,4 +4,5 @@ pinecone-client
 langchain-community
 langchain
 scikit-learn
+langchain-pinecone
 
