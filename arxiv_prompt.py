@@ -34,7 +34,7 @@ use_serverless = "False"
 
 # Configure Pinecone client
 pc = pinecone.Pinecone(api_key=api_key, environment=environment)
-spec = ServerlessSpec(cloud='gcp', region='us-central1') if use_serverless else PodSpec(environment=environment)
+spec = ServerlessSpec(cloud='gcp-starter', region='us-central1') if use_serverless else PodSpec(environment=environment)
 
 # Define or choose your index name
 index_name = 'arxiv-papers'
