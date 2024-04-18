@@ -1,6 +1,6 @@
 openai
 streamlit
-pinecone
+pinecone-client
 langchain-community
 langchain
 scikit-learn
