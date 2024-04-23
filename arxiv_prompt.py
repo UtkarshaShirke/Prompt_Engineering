@@ -164,7 +164,7 @@ if 'current_paper_id' not in st.session_state:
     st.session_state.current_paper_id = None
 
 # Sidebar tab selection
-sidebar_tab = st.sidebar.radio("Menu", ["Search Papers", "View Papers"])
+sidebar_tab = st.sidebar.radio("Menu", ["Search Papers", "Index Papers"])
 
 if sidebar_tab == "Search Papers":
     # Reset chat state when returning to the search page
@@ -182,7 +182,7 @@ if sidebar_tab == "Search Papers":
                 st.markdown(f"[Read Full Paper PDF]({paper['pdf_link']})", unsafe_allow_html=True)
 
 
-elif sidebar_tab == "View Papers":
+elif sidebar_tab == "Index Papers":
     if 'papers' in st.session_state and st.session_state.papers:
         paper_titles = [paper['title'] for paper in st.session_state.papers]
         selected_paper_title = st.sidebar.selectbox('Select a paper to index:', paper_titles)
