@@ -164,7 +164,7 @@ if 'current_paper_id' not in st.session_state:
     st.session_state.current_paper_id = None
 
 # Sidebar tab selection
-sidebar_tab = st.sidebar.radio("Menu", ["Search Papers", "Index Papers"])
+sidebar_tab = st.sidebar.radio("Menu", ["Search Papers", "View Papers"])
 
 if sidebar_tab == "Search Papers":
     # Reset chat state when returning to the search page
