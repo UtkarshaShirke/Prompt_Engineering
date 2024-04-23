@@ -182,7 +182,7 @@ if sidebar_tab == "Search Papers":
                 st.markdown(f"[Read Full Paper PDF]({paper['pdf_link']})", unsafe_allow_html=True)
 
 
-elif sidebar_tab == "Index Papers":
+elif sidebar_tab == "View Papers":
     if 'papers' in st.session_state and st.session_state.papers:
         paper_titles = [paper['title'] for paper in st.session_state.papers]
         selected_paper_title = st.sidebar.selectbox('Select a paper to index:', paper_titles)
