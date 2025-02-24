@@ -30,11 +30,16 @@ import toml
 # Pinecone Setup
 api_key = st.secrets['PINECONE_API_KEY']
 environment = st.secrets['PINECONE_ENVIRONMENT']
-use_serverless = os.environ.get("USE_SERVERLESS", "False").lower() == "true"
+# use_serverless = os.environ.get("USE_SERVERLESS", "False").lower() == "true"
+use_serverless = "True"
+supported_region = "us-east-1"
 
 # Configure Pinecone client
-pc = pinecone.Pinecone(api_key=api_key, environment=environment)
-spec = ServerlessSpec(cloud='gcp-starter', region='us-central1') if use_serverless else PodSpec(environment=environment)
+# pc = pinecone.Pinecone(api_key=api_key, environment=environment)
+# spec = ServerlessSpec(cloud='gcp-starter', region='us-central1') if use_serverless else PodSpec(environment=environment)
+
+pc = pinecone.Pinecone(api_key=api_key, environment=supported_region)
+spec = ServerlessSpec(cloud='aws', region=supported_region) if use_serverless else PodSpec(environment=supported_region)
 
 # Define or choose your index name
 index_name = 'arxiv-papers'
